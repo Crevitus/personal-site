@@ -15,7 +15,7 @@
         "start": "cross-env NODE_ENV=production remix-serve build",
         "start:mocks": "binode --require ./mocks -- @remix-run/serve:remix-serve build",
         "start-local": "node -r dotenv/config node_modules/.bin/remix-serve build",
-        "postinstall": "remix setup netlify"
+        "postinstall": "remix setup node"
     },
     "dependencies": {
         "@netlify/functions": "^1.0.0",
