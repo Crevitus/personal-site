@@ -328,3 +328,15 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Remix
+node_modules
+
+/.cache
+/build
+/public/build
+.env
+/app/styles/tailwind.css
+
+.idea
+.DS_Store
