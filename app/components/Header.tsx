@@ -6,7 +6,7 @@ const Header: React.FC = () => (
     <div className="mx-auto max-w-5xl px-6">
       <div className="flex w-full flex-col items-center justify-center sm:flex-row sm:justify-between">
         <div className="mb-4 flex flex-col items-center sm:mb-0 sm:flex-row">
-          <Link to="/" className="text-2xl text-purple-800">
+          <Link to="/" className="text-2xl text-blue-900">
             Ben Crevis
           </Link>
           <div className="flex space-x-5 text-center sm:ml-8">
