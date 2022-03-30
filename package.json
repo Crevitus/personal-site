@@ -12,12 +12,13 @@
         "dev:remix": "cross-env NODE_ENV=development binode --require ./mocks -- @remix-run/dev:remix dev",
         "generate:css": "tailwindcss -o ./app/styles/tailwind.css",
         "test": "vitest",
-        "start": "remix-serve build",
+        "start": "cross-env NODE_ENV=production remix-serve build",
         "start:mocks": "binode --require ./mocks -- @remix-run/serve:remix-serve build",
         "start-local": "node -r dotenv/config node_modules/.bin/remix-serve build",
-        "postinstall": "remix setup node"
+        "postinstall": "remix setup netlify"
     },
     "dependencies": {
+        "@remix-run/netlify": "^1.3.3",
         "@remix-run/react": "^1.3.3",
         "@remix-run/serve": "^1.3.3",
         "dotenv": "^16.0.0",
