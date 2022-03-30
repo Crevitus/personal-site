@@ -1,0 +1,12 @@
+[build]
+command = "remix build"
+functions = "netlify/functions"
+publish = "public"
+
+[[headers]]
+for = "/build/*"
+[headers.values]
+"Cache-Control" = "public, max-age=31536000, s-maxage=31536000"
+
+# Change this path with the path to your repository
+GO_IMPORT_PATH = "https://github.com/Crevitus/remix-reactbricks-typescript-netlify-starter"
