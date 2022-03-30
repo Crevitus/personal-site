@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Describeable } from './games-entities/describeable';
+import { Describable } from './games-entities/describable';
 import { take } from 'rxjs/operators';
 
 @Injectable({
@@ -11,31 +11,31 @@ export class GamesRepositoryService {
     constructor(private db: AngularFirestore) {
     }
 
-    public async getUnusedDescribeables(): Promise<Describeable[]> {
-        const describeables = this.db.collection<Describeable>('Describeables',
+    public async getUnusedDescribables(): Promise<Describable[]> {
+        const describables = this.db.collection<Describable>('Describables',
                 ref => ref.where('used', '==', false));
 
-        return await describeables.valueChanges({idField: 'id'})
+        return await describables.valueChanges({idField: 'id'})
             .pipe(take(1))
             .toPromise();
     }
 
-    public addDescribeable(value: Describeable): void {
-        const describeables = this.db.collection<Describeable>('Describeables');
+    public addDescribeable(value: Describable): void {
+        const describables = this.db.collection<Describable>('Describables');
 
-        describeables.add(value);
+        describables.add(value);
     }
 
     public async markDescribeableAsUsed(id: string): Promise<void> {
-        await this.db.doc(`/Describeables/${id}`).update({
+        await this.db.doc(`/Describables/${id}`).update({
             used: true
         });
     }
 
-    public async removeAllDescribeables(): Promise<void> {
-        const describeables = this.db.collection<Describeable>('Describeables');
+    public async removeAllDescribables(): Promise<void> {
+        const describables = this.db.collection<Describable>('Describables');
 
-        const list = await describeables.get().toPromise();
+        const list = await describables.get().toPromise();
 
         list.forEach(item => item.ref.delete());
     }

@@ -9,11 +9,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { GamesListingComponent } from './dashboard/games-listing/games-listing.component';
-import { DescribeablesAdminComponent } from './dashboard/describeables/describeables-admin/describeables-admin.component';
-import { DescribeablesPlayComponent } from './dashboard/describeables/describeables-play/describeables-play.component';
+import { DescribablesPlayComponent } from './dashboard/describables/describables-play/describables-play.component';
+import { DescribablesSetupComponent } from './dashboard/describables/describables-setup/describables-setup.component';
 
 @NgModule({
-    declarations: [DashboardComponent, GamesListingComponent, DescribeablesAdminComponent, DescribeablesPlayComponent],
+    declarations: [DashboardComponent, GamesListingComponent, DescribablesSetupComponent, DescribablesPlayComponent],
     imports: [
         CommonModule,
         GamesRoutingModule,
