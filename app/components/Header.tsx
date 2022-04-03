@@ -19,8 +19,11 @@ const Header: React.FC = () => (
             >
               Open Source
             </Link>
-            <Link to="/services" className="text-gray-500 hover:text-pink-700">
-              Services
+            <Link
+              to="/hydroponics"
+              className="text-gray-500 hover:text-pink-700"
+            >
+              Hydroponics
             </Link>
             <Link to="/recipes" className="text-gray-500 hover:text-pink-700">
               Recipes
