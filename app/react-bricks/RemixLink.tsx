@@ -1,5 +1,5 @@
-import { Link, useLocation } from 'remix';
-import { types } from 'react-bricks/frontend';
+import { Link, useLocation } from '@remix-run/react';
+import type { types } from 'react-bricks/frontend';
 
 const RemixLink: types.RenderLocalLink = ({
   href,

@@ -1,7 +1,6 @@
 import React from 'react';
-import { LoaderFunction, json, useLoaderData } from 'remix';
+import { useLoaderData } from '@remix-run/react';
 import { getRecentMoistureReadings } from 'app/server/db.server';
-import { fromUnixTime } from 'date-fns';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -14,8 +13,11 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import 'chartjs-adapter-date-fns';
+import 'chartjs-adapter-moment';
 import Layout from '~/components/Layout';
+import moment from 'moment';
+import type { LoaderFunction } from '@remix-run/node';
+import { json } from '@remix-run/node';
 
 ChartJS.register(
   CategoryScale,
@@ -29,7 +31,7 @@ ChartJS.register(
 );
 
 function toDateTime(secs: string) {
-  return fromUnixTime(Number(secs));
+  return moment.unix(Number(secs));
 }
 
 function mapToChart(dataPoint: { humidity: number; timestamp: string }) {
@@ -53,10 +55,8 @@ const Hydroponics: React.FC = () => {
   const options = {
     scales: {
       y: {
-        ticks: {
-          min: 0,
-          max: 100,
-        },
+        min: 0,
+        max: 100,
       },
       x: {
         type: 'time',

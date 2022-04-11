@@ -1362,15 +1362,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@netlify/functions@npm:1.0.0"
-  dependencies:
-    is-promise: ^4.0.0
-  checksum: 1e3c234f14fd2fe8f46cae9336679054bf067b60217ee1c424adec1b1d1e4208eeaacb3401c48b625fe057df56f5dc553b961d4758f53bb0eae6f5b78d6385ad
-  languageName: node
-  linkType: hard
-
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1634,17 +1625,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/netlify@npm:^1.3.5":
-  version: 1.3.5
-  resolution: "@remix-run/netlify@npm:1.3.5"
-  dependencies:
-    "@remix-run/node": 1.3.5
-  peerDependencies:
-    "@netlify/functions": ^0.10.0
-  checksum: 1519648a46ad277197b9428fa99957cbcdf5c8ea5b6da4a071ab27c20ef72304da7851a08f59a6a4639821fd45bf63769e213c69d4d5632e817e09fdaaf00830
-  languageName: node
-  linkType: hard
-
 "@remix-run/node@npm:1.3.5":
   version: 1.3.5
   resolution: "@remix-run/node@npm:1.3.5"
@@ -1722,6 +1702,17 @@ __metadata:
     react: ">=16.8"
     react-dom: ">=16.8"
   checksum: baeb973bb0e6503eb43b8878a95078012231a2e57b732a892f643808a0a7126ce3d389511d286abefe4562d212f08479b410a1f7bfae0d9cdb3c2122d702ae08
+  languageName: node
+  linkType: hard
+
+"@remix-run/vercel@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "@remix-run/vercel@npm:1.3.5"
+  dependencies:
+    "@remix-run/node": 1.3.5
+  peerDependencies:
+    "@vercel/node": ^1.8.3
+  checksum: 104bbae205c1bb31b5622a6063c9d5b4d21f5ba003f2aab078678d6187a2ba8c8229ba485ad2a261c0cff2c585e9e0ae7e381b8d244214765e7f7a8d765ec337
   languageName: node
   linkType: hard
 
@@ -2503,6 +2494,25 @@ __metadata:
     "@typescript-eslint/types": 5.18.0
     eslint-visitor-keys: ^3.0.0
   checksum: c856e3cf2fde3008e1d9bea3c73bc60d9060c7cb6d6ea186c20db9d74eff84986365f518dd1b4e142dca179e9a5cd7a6ed4381173d6abfd0ebd4d16d5cf50b94
+  languageName: node
+  linkType: hard
+
+"@vercel/node-bridge@npm:2.2.0":
+  version: 2.2.0
+  resolution: "@vercel/node-bridge@npm:2.2.0"
+  checksum: 7ba972a005304d96b0c12bde62cf791b700fe726ac2c7cf83088a34912d0e79d130226502e97f71834d1182a43b504437d300075c74e8f6e786c772a79b0af90
+  languageName: node
+  linkType: hard
+
+"@vercel/node@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "@vercel/node@npm:1.14.0"
+  dependencies:
+    "@types/node": "*"
+    "@vercel/node-bridge": 2.2.0
+    ts-node: 8.9.1
+    typescript: 4.3.4
+  checksum: cde225346712f2401538dcd7a988ae2d44a8c58f23eb3abb69ff2f639904077c747b48ad2b82f6a383d8270fea4453eff22f3b7d13c6a87b2bf96e322b717144
   languageName: node
   linkType: hard
 
@@ -3570,12 +3580,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chartjs-adapter-date-fns@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "chartjs-adapter-date-fns@npm:2.0.0"
+"chartjs-adapter-moment@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "chartjs-adapter-moment@npm:1.0.0"
   peerDependencies:
     chart.js: ^3.0.0
-  checksum: 08ee2f99da4a15434e28da733cb0489fe94012ac1a493fbf01d660bcf17df3bb28ce767939c2881b67b3bbefe1a7ffe70dcea4cbd860ab6c2c670d90816e8176
+    moment: ^2.10.2
+  checksum: d1efe7d9d7b08e93111db93e684cf3b3aa656144b2e0d4cd9efcaaf62a7493799762d6467c85a6410dda21438ccaad5d1e887243ce8130f8bc384e775a9edd00
   languageName: node
   linkType: hard
 
@@ -7273,13 +7284,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-promise@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "is-promise@npm:4.0.0"
-  checksum: 0b46517ad47b00b6358fd6553c83ec1f6ba9acd7ffb3d30a0bf519c5c69e7147c132430452351b8a9fc198f8dd6c4f76f8e6f5a7f100f8c77d57d9e0f4261a8a
-  languageName: node
-  linkType: hard
-
 "is-reference@npm:^3.0.0":
   version: 3.0.0
   resolution: "is-reference@npm:3.0.0"
@@ -9745,12 +9749,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "personal-site@workspace:."
   dependencies:
-    "@netlify/functions": ^1.0.0
     "@remix-run/dev": v0.0.0-experimental-9aba8b51
     "@remix-run/eslint-config": ^1.3.5
-    "@remix-run/netlify": ^1.3.5
+    "@remix-run/node": 1.3.5
     "@remix-run/react": ^1.3.5
     "@remix-run/serve": ^1.3.5
+    "@remix-run/vercel": ^1.3.5
     "@testing-library/dom": ^8.13.0
     "@testing-library/jest-dom": ^5.16.4
     "@testing-library/react": ^13.0.0
@@ -9760,13 +9764,13 @@ __metadata:
     "@types/node": ^17.0.23
     "@types/react": ^18.0.1
     "@types/react-dom": ^18.0.0
+    "@vercel/node": ^1.14.0
     "@vitejs/plugin-react": ^1.3.0
     autoprefixer: ^10.4.4
     binode: ^1.0.5
     chart.js: ^3.7.1
-    chartjs-adapter-date-fns: ^2.0.0
+    chartjs-adapter-moment: ^1.0.0
     cross-env: ^7.0.3
-    date-fns: ^2.28.0
     dotenv: ^16.0.0
     eslint: ^8.13.0
     eslint-config-prettier: ^8.5.0
@@ -11459,7 +11463,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.16, source-map-support@npm:^0.5.21":
+"source-map-support@npm:^0.5.16, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.21":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -12131,6 +12135,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-node@npm:8.9.1":
+  version: 8.9.1
+  resolution: "ts-node@npm:8.9.1"
+  dependencies:
+    arg: ^4.1.0
+    diff: ^4.0.1
+    make-error: ^1.1.1
+    source-map-support: ^0.5.17
+    yn: 3.1.1
+  peerDependencies:
+    typescript: ">=2.7"
+  bin:
+    ts-node: dist/bin.js
+    ts-node-script: dist/bin-script.js
+    ts-node-transpile-only: dist/bin-transpile.js
+    ts-script: dist/bin-script-deprecated.js
+  checksum: 59997e32cfb84323317f9fd33ff62d025b467ff36c296c3ad1ee54f08fd355c58fab37e096e2a63fd01fced929384b16b9d74bf324713a21844e527ddd5f6c17
+  languageName: node
+  linkType: hard
+
 "ts-node@npm:^10.7.0":
   version: 10.7.0
   resolution: "ts-node@npm:10.7.0"
@@ -12290,6 +12314,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:4.3.4":
+  version: 4.3.4
+  resolution: "typescript@npm:4.3.4"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 75e1f2769c7ff38c718523d05eaf1c2611dbf92c0ab0f85f603ead9bb23416af2009a5dac46e76ef6a207a8508fa53f51b43a41f2a91b1241b53cd744c16128c
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^4.6.3":
   version: 4.6.3
   resolution: "typescript@npm:4.6.3"
@@ -12297,6 +12331,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 255bb26c8cb846ca689dd1c3a56587af4f69055907aa2c154796ea28ee0dea871535b1c78f85a6212c77f2657843a269c3a742d09d81495b97b914bf7920415b
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@4.3.4#~builtin<compat/typescript>":
+  version: 4.3.4
+  resolution: "typescript@patch:typescript@npm%3A4.3.4#~builtin<compat/typescript>::version=4.3.4&hash=bda367"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 6ccc2e1148e172da119ea4b72c66395a0c18a53884d21fb82bb4503a948a7169e9961defe24a359040a3d77bf5ff338945804296e0e27c87b5bd22ea1d25781b
   languageName: node
   linkType: hard
 

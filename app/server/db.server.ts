@@ -6,7 +6,7 @@ export const getRecentMoistureReadings = async () => {
   const db = admin.database();
 
   const ref = db.ref('/olive-tree');
-  const readings = await ref.limitToLast(20).get();
+  const readings = await ref.limitToLast(30).get();
   const readingValues = readings.val();
 
   return Object.keys(readingValues).map((k) => readingValues[k]);

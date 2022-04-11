@@ -5,7 +5,7 @@ node_modules
 /public/build
 .env
 /app/styles/tailwind.css
-.netlify
+/api/index.js
 
 .idea
 .DS_Store
@@ -17,3 +17,4 @@ node_modules
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+.vercel

@@ -1,4 +1,4 @@
-import { types } from 'react-bricks/frontend';
+import type { types } from 'react-bricks/frontend';
 
 // React Bricks UI website bricks
 import website from 'react-bricks-ui/website';
