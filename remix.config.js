@@ -7,14 +7,10 @@ module.exports =
     ? {
         serverBuildTarget: 'vercel',
         server: './server.js',
-        ignoredRouteFiles: ['.*'],
-        serverBuildPath: 'api/index.js',
-        // appDirectory: "app",
-        // assetsBuildDirectory: "public/build",
-        // publicPath: "/build/",
+        ignoredRouteFiles: ['**/.*'],
       }
     : {
-        ignoredRouteFiles: ['.*'],
+        ignoredRouteFiles: ['**/.*'],
         // appDirectory: "app",
         // assetsBuildDirectory: "public/build",
         // serverBuildPath: "api/index.js",
