@@ -5,7 +5,7 @@ node_modules
 /public/build
 .env
 /app/styles/tailwind.css
-/api/index.js
+/api/_build/*
 
 .idea
 .DS_Store
